@@ -187,25 +187,25 @@ function renderMenu(){
   }
 }
 
-// Galería a partir del contenido de /images (listado manual base)
+// Galería con nombres de archivo limpios para GitHub Pages
 const galleryImages = [
-  "./images/WhatsApp Image 2025-09-03 at 20.04.20_ba962c1e.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.20_e79b1843.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.20_f8e4e686.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.21_a80c4c77.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_9b9c3b84.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_a7998aa3.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_ad3b7105.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_f1bfe618.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_0605c7ed.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.27_129d4075.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.03.54_7a2327b7.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.03.54_46e9e8b2.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.28_e51bfc6d.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.04.00_91670266.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.02.11_0697874e.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.03.36_8a11a2e0.jpg",
-  "./images/WhatsApp Image 2025-09-03 at 20.03.20_e4230149.jpg"
+  "images/WhatsApp Image 2025-09-03 at 20.04.20_ba962c1e.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.20_e79b1843.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.20_f8e4e686.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.21_a80c4c77.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_9b9c3b84.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_a7998aa3.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_ad3b7105.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_f1bfe618.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_0605c7ed.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.27_129d4075.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.03.54_7a2327b7.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.03.54_46e9e8b2.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.28_e51bfc6d.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.04.00_91670266.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.02.11_0697874e.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.03.36_8a11a2e0.jpg",
+  "images/WhatsApp Image 2025-09-03 at 20.03.20_e4230149.jpg"
 ];
 
 function openLightbox(src){
@@ -233,6 +233,9 @@ function renderGallery(){
     img.loading = 'lazy';
     img.src = name;
     img.alt = 'Tabla de charcutería Delicatessen';
+    // Debug: verificar si la imagen carga
+    img.onerror = () => console.error('Error cargando imagen:', name);
+    img.onload = () => console.log('Imagen cargada:', name);
     slide.appendChild(img);
     slide.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(name); });
     track.appendChild(slide);
