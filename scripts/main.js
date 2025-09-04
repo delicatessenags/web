@@ -227,14 +227,14 @@ function renderGallery(){
   track.innerHTML = '';
   galleryImages.forEach(name => {
     const slide = document.createElement('a');
-    slide.href = `./images/${name}`;
+    slide.href = name;
     slide.className = 'carousel-slide';
     const img = document.createElement('img');
     img.loading = 'lazy';
-    img.src = `./images/${name}`;
+    img.src = name;
     img.alt = 'Tabla de charcutería Delicatessen';
     slide.appendChild(img);
-    slide.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(`./images/${name}`); });
+    slide.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(name); });
     track.appendChild(slide);
   });
   const prev = document.getElementById('carousel-prev');
