@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delicatessen — Tablas de charcutería</title>
+  <meta name="description" content="Delicatessen: Tablas de charcutería artesanales en Aguascalientes. Pedidos por WhatsApp e Instagram.">
+  <meta name="theme-color" content="#7B002C">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./images/WhatsApp Image 2025-09-03 at 20.02.31_3004871f.jpg">
+  <link rel="stylesheet" href="./styles/main.css">
+  <meta property="og:title" content="Delicatessen — Tablas de charcutería">
+  <meta property="og:description" content="Tablas de charcutería artesanales en Aguascalientes. Pedidos por WhatsApp e Instagram.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tu-usuario.github.io/PaginaDelicatessenSelma/">
+  <meta property="og:image" content="./images/WhatsApp Image 2025-09-03 at 20.04.20_ba962c1f.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="brand-logo" src="./images/WhatsApp Image 2025-09-03 at 20.02.31_3004871f.jpg" alt="Delicatessen logo">
+        <span class="brand-name">Delicatessen</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        
+        <a class="btn btn-primary" href="https://wa.me/524491011704?text=Hola%20Delicatessen,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="WhatsApp">Pedir</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-media">
+        <img src="./images/WhatsApp Image 2025-09-03 at 20.04.21_a80c4c77.jpg" alt="Tablas de charcutería Delicatessen">
+        <div class="hero-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="container hero-content">
+        <h1>Tablas de charcutería artesanales</h1>
+        <p>Calidad, sabor y presentación para tus momentos especiales en Aguascalientes.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://wa.me/524491011704?text=Hola%20Delicatessen,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          <a class="btn btn-outline" href="#menu">Ver menú</a>
+          <a class="btn btn-secondary" href="https://www.instagram.com/delicatessen.ags/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about container" id="nosotros">
+      <h2>Nosotros</h2>
+      <p>En Delicatessen seleccionamos ingredientes de la más alta calidad y armamos tablas memorables para regalos, reuniones y eventos. Cuidamos cada detalle para que disfrutes sin preocupaciones.</p>
+    </section>
+
+    <section class="menu container" id="menu">
+      <div class="section-head">
+        <h2>Menú y precios</h2>
+        <p>Consulta tamaños y opciones. Pide por WhatsApp o Instagram.</p>
+      </div>
+      <div id="menu-grid" class="cards-grid">
+        <!-- Items del menú generados desde scripts/main.js (placeholder hasta extraer precios) -->
+      </div>
+      
+    </section>
+
+    <section class="content-list container" id="contenido">
+      <div class="section-head">
+        <h2>Contenidos</h2>
+        <p>Quesos, carnes y extras de nuestras tablas Tradicional y Gourmet.</p>
+      </div>
+      <div id="contenido-list" class="contenido-grid"></div>
+    </section>
+
+    <section class="sizes container" id="tamanos">
+      <div class="section-head">
+        <h2>Tamaños de tablas</h2>
+        <p>Medidas y capacidad. La tabla de madera está incluida.</p>
+      </div>
+      <div id="sizes-grid" class="sizes-grid" aria-label="Tamaños de tablas"></div>
+      <p class="card-desc" style="margin-top:8px">Opcional: mini botella de vino +$80</p>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="container section-head">
+        <h2>Galería</h2>
+        <p>Algunas de nuestras tablas y presentaciones.</p>
+      </div>
+      <div class="carousel" id="gallery-carousel">
+        <button class="carousel-btn prev" id="carousel-prev" aria-label="Anterior">‹</button>
+        <div class="carousel-viewport" id="carousel-viewport">
+          <div class="carousel-track" id="carousel-track"></div>
+        </div>
+        <button class="carousel-btn next" id="carousel-next" aria-label="Siguiente">›</button>
+      </div>
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">×</button>
+        <img id="lightbox-img" alt="Vista ampliada">
+      </div>
+    </section>
+
+    <section class="location" id="ubicacion">
+      <div class="container">
+        <h2>Ubicación y horario</h2>
+        <div class="location-grid">
+          <div class="location-details">
+            <p><strong>Dirección:</strong> Monte Everest 505-2, Los Bosques, 20120 Aguascalientes, Ags., México</p>
+            <p><strong>Horario:</strong> 10:00 a 20:00</p>
+            <p><strong>Pedidos:</strong> WhatsApp e Instagram</p>
+            <div class="socials">
+              <a class="btn btn-secondary" href="https://wa.me/524491011704?text=Hola%20Delicatessen" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn btn-outline" href="https://www.instagram.com/delicatessen.ags/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+          <div class="map-embed">
+            <iframe title="Mapa Delicatessen" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Monte%20Everest%20505-2,%20Los%20Bosques,%2020120%20Aguascalientes,%20Ags.,%20M%C3%A9xico&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Delicatessen. Todos los derechos reservados.</p>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+  <noscript>Para la mejor experiencia, habilita JavaScript. Menú y galería requieren JS.</noscript>
+  <script src="https://unpkg.com/tesseract.js@4.0.3/dist/tesseract.min.js" defer onload="window.__runOCR && window.__runOCR(window.Tesseract)"></script>
+</body>
+</html>
+
