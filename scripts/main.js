@@ -370,51 +370,91 @@ function setYear(){
 function setupMobileMenu() {
   const mobileToggle = document.getElementById('mobile-menu-toggle');
   const mainNav = document.getElementById('main-nav');
+  const overlay = document.getElementById('mobile-menu-overlay');
   
-  if (!mobileToggle || !mainNav) return;
+  if (!mobileToggle || !mainNav) {
+    console.log('Elementos del menú móvil no encontrados');
+    return;
+  }
   
-  mobileToggle.addEventListener('click', () => {
+  // Función para cerrar el menú
+  function closeMenu() {
+    mainNav.classList.remove('open');
+    mobileToggle.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  }
+  
+  // Función para abrir el menú
+  function openMenu() {
+    mainNav.classList.add('open');
+    mobileToggle.classList.add('active');
+    if (overlay) overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  }
+  
+  // Toggle del menú
+  mobileToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     const isOpen = mainNav.classList.contains('open');
+    console.log('Toggle menú:', isOpen ? 'cerrar' : 'abrir');
     
     if (isOpen) {
-      // Cerrar menú
-      mainNav.classList.remove('open');
-      mobileToggle.classList.remove('active');
-      document.body.style.overflow = '';
+      closeMenu();
     } else {
-      // Abrir menú
-      mainNav.classList.add('open');
-      mobileToggle.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      openMenu();
     }
   });
   
   // Cerrar menú al hacer clic en un enlace
   mainNav.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
-      mainNav.classList.remove('open');
-      mobileToggle.classList.remove('active');
-      document.body.style.overflow = '';
+      console.log('Cerrar menú por enlace');
+      closeMenu();
     }
   });
   
+  // Cerrar menú al hacer clic en el overlay
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      console.log('Cerrar menú por overlay');
+      closeMenu();
+    });
+  }
+  
   // Cerrar menú al hacer clic fuera
   document.addEventListener('click', (e) => {
-    if (!mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
-      mainNav.classList.remove('open');
-      mobileToggle.classList.remove('active');
-      document.body.style.overflow = '';
+    if (mainNav.classList.contains('open') && 
+        !mainNav.contains(e.target) && 
+        !mobileToggle.contains(e.target) &&
+        !overlay?.contains(e.target)) {
+      console.log('Cerrar menú por clic fuera');
+      closeMenu();
     }
   });
   
   // Cerrar menú con tecla Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mainNav.classList.contains('open')) {
-      mainNav.classList.remove('open');
-      mobileToggle.classList.remove('active');
-      document.body.style.overflow = '';
+      console.log('Cerrar menú por Escape');
+      closeMenu();
     }
   });
+  
+  // Cerrar menú al redimensionar la ventana (si se vuelve desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && mainNav.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+  
+  console.log('Menú móvil configurado correctamente');
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
