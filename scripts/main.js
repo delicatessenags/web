@@ -8,28 +8,28 @@ const menuData = [
     category: 'Tablas Tradicional',
     note: 'Incluye tabla de madera. Mini botella de vino +$80',
     items: [
-      { title: 'Mini', price: '$220', people: '1 persona', image: './images/WhatsApp Image 2025-09-03 at 20.03.03_a405d6d9.jpg' },
-      { title: 'Chica', price: '$350', people: '2–3 personas', image: './images/WhatsApp Image 2025-09-03 at 20.04.20_526bfecb.jpg' },
-      { title: 'Mediana', price: '$550', people: '4–6 personas', image: './images/WhatsApp Image 2025-09-03 at 20.03.54_7a2327b7.jpg' },
-      { title: 'Grande', price: '$950', people: '8–10 personas', image: './images/WhatsApp Image 2025-09-03 at 20.04.20_ba962c1e.jpg' }
+      { title: 'Mini', price: '$220', people: '1 persona', image: './images/tradicional-mini.jpg' },
+      { title: 'Chica', price: '$350', people: '2–3 personas', image: './images/tradicional-chica.jpg' },
+      { title: 'Mediana', price: '$550', people: '4–6 personas', image: './images/tradicional-mediana.jpg' },
+      { title: 'Grande', price: '$950', people: '8–10 personas', image: './images/tradicional-grande.jpg' }
     ]
   },
   {
     category: 'Tablas Gourmet',
     note: 'Incluye tabla de madera. Mini botella de vino +$80',
     items: [
-      { title: 'Mini', price: '$350', people: '1 persona', image: './images/WhatsApp Image 2025-09-03 at 20.03.54_46e9e8b2.jpg' },
-      { title: 'Chica', price: '$500', people: '2–3 personas', image: './images/WhatsApp Image 2025-09-03 at 20.02.49_d5cb05c3.jpg' },
-      { title: 'Mediana', price: '$750', people: '4–6 personas', image: './images/WhatsApp Image 2025-09-03 at 20.03.20_e4230149.jpg' },
-      { title: 'Grande', price: '$1,300', people: '8–10 personas', image: './images/WhatsApp Image 2025-09-03 at 20.04.20_e79b1843.jpg' }
+      { title: 'Mini', price: '$350', people: '1 persona', image: './images/gourmet-mini.jpg' },
+      { title: 'Chica', price: '$500', people: '2–3 personas', image: './images/gourmet-chica.jpg' },
+      { title: 'Mediana', price: '$750', people: '4–6 personas', image: './images/gourmet-mediana.jpg' },
+      { title: 'Grande', price: '$1,300', people: '8–10 personas', image: './images/gourmet-grande.jpg' }
     ]
   },
   {
     category: 'Charolas',
     items: [
-      { title: 'Chica', price: '$150', people: '1 persona', image: './images/WhatsApp Image 2025-09-03 at 20.02.10_1cbc37bf.jpg' },
-      { title: 'Mediana', price: '$250', people: '2–3 personas', image: './images/WhatsApp Image 2025-09-03 at 20.02.11_0697874e.jpg' },
-      { title: 'Grande', price: '$350', people: '4 personas', image: './images/WhatsApp Image 2025-09-03 at 20.03.36_8a11a2e0.jpg' }
+      { title: 'Chica', price: '$150', people: '1 persona', image: './images/charola-chica.jpg' },
+      { title: 'Mediana', price: '$250', people: '2–3 personas', image: './images/charola-mediana.jpg' },
+      { title: 'Grande', price: '$350', people: '4 personas', image: './images/charola-grande.jpg' }
     ]
   },
   {
@@ -189,23 +189,18 @@ function renderMenu(){
 
 // Galería con nombres de archivo limpios para GitHub Pages
 const galleryImages = [
-  "images/WhatsApp Image 2025-09-03 at 20.04.20_ba962c1e.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.20_e79b1843.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.20_f8e4e686.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.21_a80c4c77.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_9b9c3b84.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_a7998aa3.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_ad3b7105.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_f1bfe618.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_0605c7ed.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.27_129d4075.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.03.54_7a2327b7.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.03.54_46e9e8b2.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.28_e51bfc6d.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.04.00_91670266.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.02.11_0697874e.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.03.36_8a11a2e0.jpg",
-  "images/WhatsApp Image 2025-09-03 at 20.03.20_e4230149.jpg"
+  "images/tradicional-grande.jpg",
+  "images/gourmet-grande.jpg",
+  "images/galeria1.jpg",
+  "images/hero.jpg",
+  "images/galeria2.jpg",
+  "images/galeria3.jpg",
+  "images/galeria4.jpg",
+  "images/galeria5.jpg",
+  "images/galeria6.jpg",
+  "images/galeria7.jpg",
+  "images/tradicional-mediana.jpg",
+  "images/gourmet-mini.jpg"
 ];
 
 function openLightbox(src){
@@ -240,21 +235,117 @@ function renderGallery(){
     slide.addEventListener('click', (e)=>{ e.preventDefault(); openLightbox(name); });
     track.appendChild(slide);
   });
+  
   const prev = document.getElementById('carousel-prev');
   const next = document.getElementById('carousel-next');
   const viewport = document.getElementById('carousel-viewport');
-  const scrollBy = () => viewport.clientWidth * 0.9;
-  prev.addEventListener('click', ()=> track.scrollBy({ left: -scrollBy(), behavior:'smooth' }));
-  next.addEventListener('click', ()=> track.scrollBy({ left: scrollBy(), behavior:'smooth' }));
-  // Swipe
-  let startX = 0; let isDown = false;
-  viewport.addEventListener('pointerdown', (e)=>{ isDown = true; startX = e.clientX; viewport.setPointerCapture(e.pointerId); });
-  viewport.addEventListener('pointerup', ()=>{ isDown=false; });
-  viewport.addEventListener('pointermove', (e)=>{
-    if(!isDown) return;
-    const dx = e.clientX - startX;
-    track.scrollLeft -= dx; startX = e.clientX;
+  
+  // Función para actualizar el estado de los botones
+  function updateButtons() {
+    const isAtStart = track.scrollLeft <= 0;
+    const isAtEnd = track.scrollLeft >= (track.scrollWidth - track.clientWidth);
+    
+    prev.disabled = isAtStart;
+    next.disabled = isAtEnd;
+  }
+  
+  // Función para calcular el scroll
+  const scrollBy = () => {
+    const slideWidth = track.children[0]?.offsetWidth || viewport.clientWidth * 0.85;
+    return slideWidth + 12; // slide width + gap
+  };
+  
+  // Event listeners para botones
+  prev.addEventListener('click', ()=> {
+    track.scrollBy({ left: -scrollBy(), behavior:'smooth' });
   });
+  next.addEventListener('click', ()=> {
+    track.scrollBy({ left: scrollBy(), behavior:'smooth' });
+  });
+  
+  // Actualizar botones al cargar
+  updateButtons();
+  
+  // Actualizar botones al hacer scroll
+  track.addEventListener('scroll', updateButtons);
+  
+  // Mejorar funcionalidad de swipe para móviles
+  let startX = 0;
+  let startY = 0;
+  let isDown = false;
+  let startScrollLeft = 0;
+  let isScrolling = false;
+  
+  // Touch events para móviles
+  viewport.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    startScrollLeft = track.scrollLeft;
+    isScrolling = false;
+  }, { passive: true });
+  
+  viewport.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = Math.abs(currentX - startX);
+    const diffY = Math.abs(currentY - startY);
+    
+    // Determinar si es un swipe horizontal
+    if (diffX > diffY && diffX > 10) {
+      isScrolling = true;
+      e.preventDefault();
+      const walk = (startX - currentX) * 2;
+      track.scrollLeft = startScrollLeft + walk;
+    }
+  }, { passive: false });
+  
+  viewport.addEventListener('touchend', () => {
+    if (!isDown) return;
+    isDown = false;
+    
+    if (isScrolling) {
+      // Snap al slide más cercano
+      const slideWidth = track.children[0]?.offsetWidth || viewport.clientWidth * 0.85;
+      const gap = 12;
+      const totalSlideWidth = slideWidth + gap;
+      const currentScroll = track.scrollLeft;
+      const targetScroll = Math.round(currentScroll / totalSlideWidth) * totalSlideWidth;
+      
+      track.scrollTo({ left: targetScroll, behavior: 'smooth' });
+    }
+  }, { passive: true });
+  
+  // Mouse events para desktop
+  viewport.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.clientX;
+    startScrollLeft = track.scrollLeft;
+    viewport.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  
+  viewport.addEventListener('mouseleave', () => {
+    isDown = false;
+    viewport.style.cursor = 'grab';
+  });
+  
+  viewport.addEventListener('mouseup', () => {
+    isDown = false;
+    viewport.style.cursor = 'grab';
+  });
+  
+  viewport.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const walk = (e.clientX - startX) * 2;
+    track.scrollLeft = startScrollLeft - walk;
+  });
+  
+  // Establecer cursor inicial
+  viewport.style.cursor = 'grab';
 }
 
 function setupLightbox(){
@@ -317,10 +408,10 @@ function parseMenuText(text){
 
 window.__runOCR = async function(Tesseract){
   const images = [
-    'WhatsApp Image 2025-09-03 at 20.02.48_140235bd.jpg',
-    'WhatsApp Image 2025-09-03 at 20.02.48_32d8fb99.jpg',
-    'WhatsApp Image 2025-09-03 at 20.02.49_d5cb05c3.jpg',
-    'WhatsApp Image 2025-09-03 at 20.03.53_a61bd1ba.jpg'
+    'ocr1.jpg',
+    'ocr2.jpg',
+    'gourmet-chica.jpg',
+    'ocr3.jpg'
   ];
   console.log('OCR: iniciando análisis de imágenes del menú...', images);
   const results = [];
